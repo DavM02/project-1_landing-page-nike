@@ -1,0 +1,191 @@
+/* animation */
+
+.marquee {
+    display: flex;
+    width: 300%;
+    animation: marquee 30s linear infinite forwards;
+
+}
+
+.marquee-2 {
+    display: flex;
+    width: 300%;
+    animation: marquee-2 30s linear infinite forwards;
+}
+
+
+#marquee-2 {
+    background-color: #BA0000;
+    overflow: hidden;
+    padding: 15px 0;
+    width: 110%;
+    transform: rotate(-3deg) translateX(-10px) translateY(-135px);
+    z-index: 5;
+    position: relative;
+}
+
+#marquee {
+    background-color: #000000;
+    overflow: hidden;
+    padding: 15px 0;
+    width: 110%;
+    position: relative;
+    z-index: 7;
+    transform: rotate(3deg) translateX(-10px) translateY(-60px);
+}
+
+.marquee .between,
+.marquee-2 .between {
+    width: 33.33%;
+    margin: 0 2.74%;
+}
+
+.marquee:hover,
+.marquee-2:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-66.6%);
+    }
+}
+
+
+@keyframes marquee-2 {
+    0% {
+        transform: translateX(-66.6%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.products-display .item.active .image {
+    filter: none;
+    transform: rotate(-14deg);
+}
+
+#hero-section h2 {
+    display: none;
+}
+
+#hero-section h2.active {
+    display: block;
+}
+
+.option .image:not(.active) {
+    filter: blur(1px) grayscale();
+}
+
+.product-image {
+    display: none;
+    transform: scale(0.1);
+}
+
+.product-image.clicked {
+    display: block;
+    position: absolute;
+    top: 0;
+    animation: disappear 1s ease forwards;
+    transform: rotate(-14deg);
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateX(-166%);
+    }
+}
+
+.product-image.active {
+    display: block;
+    animation: appear 3s ease-in-out forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        /* opacity: 0; */
+        width: 100%;
+        transform: rotate(-14deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(-14deg);
+        width: 100%;
+    }
+}
+
+#best-sellers .item {
+    transition: 0.6s all ease-in-out;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+#best-sellers .item:hover .text-wrapper {
+    bottom: 0;
+}
+
+#best-sellers:hover> :not(:hover) {
+    filter: blur(2px) grayscale();
+    transform: scale(0.9);
+}
+
+.product .image:not(.desk):hover {
+    transform: rotate(-14deg);
+    cursor: pointer;
+}
+
+.product .image.blured {
+    transform: scale(0.8);
+    filter: blur(2px) invert();
+}
+
+.marquee-3 {
+    display: flex;
+    width: 300%;
+    animation: marquee 20s linear infinite forwards;
+}
+
+.marquee-3 #brands {
+    width: 33.33%;
+    margin: 0 20px;
+}
+
+.marquee-3:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-66.6%);
+    }
+}
+
+#partners .marquee-container {
+    width: 1230px !important;
+    overflow: hidden;
+}
+
+ 
